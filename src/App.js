@@ -1,4 +1,9 @@
 import './App.css';
+import { Formulario } from './components/Formulario';
+import { Listado } from './components/Listado';
+import anime from './model/anime.json';
+import series from './model/series.json';
+import peliculas from './model/peliculas.json';
 
 function App() {
   return (
@@ -39,58 +44,26 @@ function App() {
       </header>
 
       <main className="main">
+        <h2 className="title-cards">Películas</h2>
         <div className="container_cards">
-          <h2 className="title-cards">Películas</h2>
-
-          <article className="card">
-            <img src="https://www.cinevistablog.com/wp-content/uploads/2022/03/resena-the-batman-2022.jpg" alt="pelicula" className="image-card" />
-
-            <p className="date-card">2022</p>
-            <p className="title-card">The Batman</p>
-          </article>
+          <Listado apartados={peliculas}/>
         </div>
 
+        <h2 className="title-cards">Series</h2>
         <div className="container_cards">
-          <h2 className="title-cards">Series</h2>
-
-
-          <article className="card">
-            <img src="https://www.cinevistablog.com/wp-content/uploads/2022/03/resena-the-batman-2022.jpg" alt="pelicula" className="image-card" />
-
-            <p className="date-card">2022</p>
-            <p className="title-card">The Batman</p>
-          </article>
+          <Listado apartados={series}/>
         </div>
 
+        <h2 className="title-cards">Anime</h2>   
         <div className="container_cards">
-          <h2 className="title-cards">Anime</h2>
-
-          <article className="card">
-            <img src="https://www.cinevistablog.com/wp-content/uploads/2022/03/resena-the-batman-2022.jpg" alt="pelicula" className="image-card" />
-
-            <p className="date-card">2022</p>
-            <p className="title-card">The Batman</p>
-          </article>
+          <Listado apartados={anime}/>
         </div>
       </main>
 
       <section className="form">
         <div className="container_form">
           <h3 className="title-form">Lista de Películas</h3>
-          <form>
-            <input type="text" placeholder="Nombre" />
-            <input type="text" placeholder="Género" />
-            <input type="text" placeholder="Duración" />
-            <input type="text" placeholder="Imagen" />
-            <input type="date" className="form-date" />
-            <select>
-              <option value="">Elegir tipo</option>
-              <option value="pelicula">Película</option>
-              <option value="serie">Serie</option>
-              <option value="anime">Anime</option>
-            </select>
-            <button className="button">CREAR</button>
-          </form>
+          <Formulario/>
         </div>
       </section>
 

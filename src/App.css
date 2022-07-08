@@ -90,16 +90,19 @@
 }
 
 .container_cards {
-    padding:10px;
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .title-cards {
     color:#fff;
-    margin: 15px 0;
+    margin: 15px;
 }
 
 .container_cards .card {
-    margin:0 25px;
+    margin: 15px;
+    max-width: 135px;
     padding:5px 5px 0;
     display: inline-block;
     background-color: #2471A3;
@@ -127,12 +130,14 @@
 /* Apartado de estilos de la sección de formulario. */
 .form {
     grid-area: form;
+    display: flex;
+    justify-content: center;
     background-color: #D4E6F1;
 }
 
 .container_form {
-    padding: 10px 50px;
-    margin: 50px auto 0;
+    margin: 20px;
+    padding: 1px 30px;
     text-align: center;
     width: min-content;
     height: min-content;
@@ -142,15 +147,15 @@
 }
 
 .container_form * {
-    margin: 30px auto;
     display: block;
+    margin: 20px auto;
     width: max-content;
 }
 
 .form input {
     border:none;
     outline: none;
-    padding:8px;
+    padding:5px;
     width: 200px;
     height: 40px;
     box-shadow: 0 0 8px 1px #B3B6B7;
@@ -159,7 +164,7 @@
 .form select {
     border:none;
     outline: none;
-    padding:8px;
+    padding:5px;
     width: 220px;
     height: 40px;
     box-shadow: 0 0 8px 1px #B3B6B7;
