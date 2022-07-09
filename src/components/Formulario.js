@@ -1,20 +1,68 @@
 import React from 'react'
 
-export const Formulario = () => {
+export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) => {
+
+  const crearProducto = (e) => {
+    e.preventDefault();
+
+    let nombre = e.target.nombre.value;
+    let genero = e.target.genero.value;
+    let duracion = e.target.duracion.value;
+    let imagen = e.target.imagen.value;
+    let descripcion = e.target.descripcion.value;
+    let fecha = e.target.fecha.value;
+    let tipo = e.target.tipo.value;
+
+    if (nombre == "" || genero == "" || duracion == "" || imagen == "" || descripcion == "" || fecha == "" || tipo == "") {
+      alert("Error, intente de nuevo.");
+    } else {
+      try {
+        let producto = {
+          nombre,
+          genero,
+          duracion,
+          imagen,
+          descripcion,
+          fecha,
+          tipo
+        }
+
+        switch (tipo) {
+          case "pelicula":
+            setListaPeliculas((peliculas) => [...peliculas, producto]);
+            break;
+
+          case "serie":
+            setListaSeries((series) => [...series, producto])
+            break;
+
+          case "anime":
+            setListaAnime((anime) => [...anime, producto]);
+            break;
+        }
+        e.target.reset();
+        alert("Registro exitoso.");
+      } catch (error) {
+        alert("Error, intente de nuevo.");
+      }
+    }
+  };
+
   return (
-    <form>
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Género" />
-        <input type="text" placeholder="Duración" />
-        <input type="text" placeholder="Imagen URL" />
-        <input type="date" className="form-date"/>
-        <select>
-            <option value="">Elegir tipo</option>
-            <option value="pelicula">Película</option>
-            <option value="serie">Serie</option>
-            <option value="anime">Anime</option>
-        </select>
-        <button className="button">CREAR</button>
+    <form onSubmit={crearProducto}>
+      <input type="text" name="nombre" placeholder="Nombre" />
+      <input type="text" name="genero" placeholder="Género" />
+      <input type="text" name="duracion" placeholder="Duración" />
+      <input type="text" name="imagen" placeholder="Imagen URL" />
+      <input type="text" name="descripcion" placeholder="Descripción" />
+      <input type="date" name="fecha" className="form-date" />
+      <select name="tipo">
+        <option value="">Elegir tipo</option>
+        <option value="pelicula">Película</option>
+        <option value="serie">Serie</option>
+        <option value="anime">Anime</option>
+      </select>
+      <input className="submit" type="submit" value="CREAR" />
     </form>
   )
 }

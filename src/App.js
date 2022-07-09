@@ -4,8 +4,16 @@ import { Listado } from './components/Listado';
 import anime from './model/anime.json';
 import series from './model/series.json';
 import peliculas from './model/peliculas.json';
+import { useState } from 'react';
 
 function App() {
+
+  const [listaPeliculas, setListaPeliculas] = useState(peliculas);
+
+  const [listaSeries, setListaSeries] = useState(series);
+
+  const [listaAnime, setListaAnime] = useState(anime);
+
   return (
     <div className="layout">
       <header className="header">
@@ -46,24 +54,24 @@ function App() {
       <main className="main">
         <h2 className="title-cards">Películas</h2>
         <div className="container_cards">
-          <Listado apartados={peliculas}/>
+          <Listado listaProductos={listaPeliculas}/>
         </div>
 
         <h2 className="title-cards">Series</h2>
         <div className="container_cards">
-          <Listado apartados={series}/>
+          <Listado listaProductos={listaSeries}/>
         </div>
 
         <h2 className="title-cards">Anime</h2>   
         <div className="container_cards">
-          <Listado apartados={anime}/>
+          <Listado listaProductos={listaAnime}/>
         </div>
       </main>
 
       <section className="form">
         <div className="container_form">
-          <h3 className="title-form">Lista de Películas</h3>
-          <Formulario/>
+          <h3 className="title-form">Lista de Productos</h3>
+          <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime}/>
         </div>
       </section>
 
