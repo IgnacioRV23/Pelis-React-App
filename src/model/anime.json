@@ -1,52 +1,27 @@
 [
-    {
-      "imagen": "https://images.justwatch.com/poster/248497985/s718/one-piece-1999.%7Bformat%7D",
-      "fecha": "1979-10",
-      "nombre": "Colaptes campestroides"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "2017-08",
-      "nombre": "Streptopelia senegalensis"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/5fa2dd/ffffff",
-      "fecha": "2005-07",
-      "nombre": "Boa caninus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "1951-03",
-      "nombre": "Phasianus colchicus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/dddddd/000000",
-      "fecha": "1901-03",
-      "nombre": "Gekko gecko"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "1956-08",
-      "nombre": "Herpestes javanicus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "1996-04",
-      "nombre": "Bos taurus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "1986-09",
-      "nombre": "Castor fiber"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "2012-08",
-      "nombre": "Pseudalopex gymnocercus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/dddddd/000000",
-      "fecha": "1948-05",
-      "nombre": "Rhea americana"
-    }
-  ]
+  {
+    "imagen": "https://images.justwatch.com/poster/248497985/s718/one-piece-1999.%7Bformat%7D",
+    "fecha": "1995-10-10",
+    "nombre": "One Piece"
+  },
+  {
+    "imagen": "https://m.media-amazon.com/images/I/716ASj7z2GL._AC_SY679_.jpg",
+    "fecha": "2000-08-15",
+    "nombre": "Death Note"
+  },
+  {
+    "imagen": "https://img1.ak.crunchyroll.com/i/spire2/ab001b1cb053ec0d7b1b47b0f7bf98e71647329181_main.jpg",
+    "fecha": "1990-01-12",
+    "nombre": "Dragon Ball Z"
+  },
+  {
+    "imagen": "https://images.justwatch.com/poster/8603866/s718/naruto-shippuden.%7Bformat%7D",
+    "fecha": "2000-04-23",
+    "nombre": "Naruto Shippuden"
+  },
+  {
+    "imagen": "https://img1.ak.crunchyroll.com/i/spire3/cbb55a6382682bf71e91f685c6473c5a1487736090_full.jpg",
+    "fecha": "1901-03-17",
+    "nombre": "Hunter x Hunter"
+  }
+]

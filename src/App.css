@@ -93,6 +93,7 @@
     padding:20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .title-cards {
@@ -101,7 +102,7 @@
 }
 
 .container_cards .card {
-    margin: 15px;
+    margin: 15px 20px;
     max-width: 135px;
     padding:5px 5px 0;
     display: inline-block;

@@ -1,52 +1,27 @@
 [
-    {
-      "imagen": "https://fontmeme.com/images/ben-10-font.jpg",
-      "fecha": "1979-10",
-      "nombre": "Colaptes campestroides"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "2017-08",
-      "nombre": "Streptopelia senegalensis"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/5fa2dd/ffffff",
-      "fecha": "2005-07",
-      "nombre": "Boa caninus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "1951-03",
-      "nombre": "Phasianus colchicus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/dddddd/000000",
-      "fecha": "1901-03",
-      "nombre": "Gekko gecko"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "1956-08",
-      "nombre": "Herpestes javanicus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "1996-04",
-      "nombre": "Bos taurus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/ff4444/ffffff",
-      "fecha": "1986-09",
-      "nombre": "Castor fiber"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/cc0000/ffffff",
-      "fecha": "2012-08",
-      "nombre": "Pseudalopex gymnocercus"
-    },
-    {
-      "imagen": "http://dummyimage.com/135x200.png/dddddd/000000",
-      "fecha": "1948-05",
-      "nombre": "Rhea americana"
-    }
-  ]
+  {
+    "imagen": "https://fontmeme.com/images/ben-10-font.jpg",
+    "fecha": "2010-10-10",
+    "nombre": "Ben 10"
+  },
+  {
+    "imagen": "https://mx.web.img2.acsta.net/c_310_420/pictures/18/01/23/00/56/0950731.jpg",
+    "fecha": "2011-08-28",
+    "nombre": "El increible mundo de gumball"
+  },
+  {
+    "imagen": "https://unity-img.tbxapis.com/v0/images/a56a7a3b2854e0d86f561f6da95150fa/content/618d4f44a4cc292e2f309c6f/19dfbad4a0372fc05dd9637574fab3fa/img.jpg?_v=1.5.70",
+    "fecha": "2005-07-19",
+    "nombre": "Los padrinos mágicos"
+  },
+  {
+    "imagen": "https://www.formulatv.com/images/series/posters/1500/1525/dest_1.jpg",
+    "fecha": "2000-03-05",
+    "nombre": "Gravity falls"
+  },
+  {
+    "imagen": "https://www.formulatv.com/images/series/posters/300/375/dest_1.jpg",
+    "fecha": "1990-07-20",
+    "nombre": "Bob esponja"
+  }
+]
