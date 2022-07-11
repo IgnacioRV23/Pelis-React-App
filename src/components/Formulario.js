@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) => {
 
+  let [id, setId] = useState(16);
+
   const crearProducto = (e) => {
     e.preventDefault();
-
+    
     let nombre = e.target.nombre.value;
     let genero = e.target.genero.value;
     let duracion = e.target.duracion.value;
@@ -13,11 +15,13 @@ export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) =
     let fecha = e.target.fecha.value;
     let tipo = e.target.tipo.value;
 
+
     if (nombre == "" || genero == "" || duracion == "" || imagen == "" || descripcion == "" || fecha == "" || tipo == "") {
       alert("Error, intente de nuevo.");
     } else {
       try {
         let producto = {
+          id,
           nombre,
           genero,
           duracion,
@@ -26,6 +30,7 @@ export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) =
           fecha,
           tipo
         }
+        setId(id+1);
 
         switch (tipo) {
           case "pelicula":

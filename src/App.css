@@ -35,7 +35,6 @@
     margin: 0 10px;
 }
 
-
 .nav {
     width: 100%;
     display: flex;
@@ -123,10 +122,82 @@
 }
 
 .card * {
-    cursor: default;
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
     user-select: none;
 }
 
+
+/* Apartado de estilos de la sección de detalle. */
+.container_detalle {
+    width: 90%;
+    cursor: default;
+    margin: 10px auto;
+}
+
+.detalle-flex {
+    color:#000;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    align-items: center;
+    box-shadow: 0 0 2px #EAF2F8;
+    background-color: #EAF2F8;
+}
+
+.imagen-detalle {
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    border:1px solid #000;
+}
+
+.datos-detalle {
+    padding:20px;
+    flex-grow: 2;
+}
+
+.datos-detalle p {
+    margin: 40px;
+}
+
+.title-detalle {
+    text-align: center;
+}
+
+.color-pelicula {
+    color:#8E44AD;
+}
+
+.color-serie {
+    color:#E67E22;
+}
+
+.color-anime {
+    color:#C0392B;
+}
+
+.boton-ver {
+    color:#fff;
+    cursor: pointer;
+    padding:15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+.descripcion-detalle {
+    color:#000;
+    padding: 5px;
+    margin: 15px auto;
+    background-color: #EAF2F8;
+    box-shadow: 0 0 2px #EAF2F8;
+}
+
+.parrafo-descripcion {
+    padding:8px;
+}
 
 /* Apartado de estilos de la sección de formulario. */
 .form {
@@ -185,6 +256,19 @@
     background-color: #154360;
 }
 
+/* Apartado que permite ocultar la seccion de formulario. */
+.form-hidden {
+    display: none;
+}
+
+.layout-hidden {
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+}
+
 
 /* Apartado de estilos de la sección de footer. */
 .footer {
@@ -201,14 +285,14 @@
     cursor: default;
 } 
 
-.footer .footer-help a {
+.footer .footer-help {
     color:#424949;
     margin:0 20px;
     text-decoration: none;
     transition: all 300ms;
 }
 
-.footer .footer-help a:hover {
+.footer .footer-help:hover {
     color:#2980B9;
     font-size: 15.5px;
     text-decoration: underline;

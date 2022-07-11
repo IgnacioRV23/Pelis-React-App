@@ -1,27 +1,52 @@
 [
   {
+    "id":"1",
+    "nombre": "The Batman",
+    "genero":"accion",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.cinevistablog.com/wp-content/uploads/2022/03/resena-the-batman-2022.jpg",
     "fecha": "2022-05-20",
-    "nombre": "The Batman"
+    "tipo":"pelicula"
   },
   {
+    "id":"2",
+    "genero":"accion",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://es.web.img2.acsta.net/pictures/14/04/30/11/55/592219.jpg",
     "fecha": "2000-07-14",
-    "nombre": "Harry Potter 1"
+    "nombre": "Harry Potter 1",
+    "tipo":"pelicula"
   },
   {
+    "id":"3",
+    "genero":"accion",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.cinemascomics.com/wp-content/uploads/2016/05/Iron_Man_2_Poster.jpg",
     "fecha": "2008-02-05",
-    "nombre": "Iron Man 2"
+    "nombre": "Iron Man 2",
+    "tipo":"pelicula"
   },
   {
-    "imagen": "https://play-lh.googleusercontent.com/nABrphzPwvNTvubbWW5dq1nALv9HUgv2G7-O7fAPEbAAriQkMGi58myWx_yKXfvA6T0",
+    "id":"4",
+    "genero":"accion",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
+    "imagen": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9788/4488/9788448835859.jpg",
     "fecha": "2017-08-20",
-    "nombre": "Barbie escuela de princesas"
+    "nombre": "Barbie escuela de princesas",
+    "tipo":"pelicula"
   },
   {
+    "id":"5",
+    "genero":"accion",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/54d8d22e16fc1162de72ad15ca49014ce47e0fd4f8030c992e5da68224827ccb._RI_V_TTW_.jpg",
     "fecha": "2020-09-15",
-    "nombre": "Transformers 5"
+    "nombre": "Transformers 5",
+    "tipo":"pelicula"
   }
 ]

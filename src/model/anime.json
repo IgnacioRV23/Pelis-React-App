@@ -1,27 +1,52 @@
 [
   {
+    "id":"11",
+    "genero":"shonnen",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://images.justwatch.com/poster/248497985/s718/one-piece-1999.%7Bformat%7D",
     "fecha": "1995-10-10",
-    "nombre": "One Piece"
+    "nombre": "One Piece",
+    "tipo":"anime"
   },
   {
+    "id":"12",
+    "genero":"shonnen",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://m.media-amazon.com/images/I/716ASj7z2GL._AC_SY679_.jpg",
     "fecha": "2000-08-15",
-    "nombre": "Death Note"
+    "nombre": "Death Note",
+    "tipo":"anime"
   },
   {
+    "id":"13",
+    "genero":"shonnen",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://img1.ak.crunchyroll.com/i/spire2/ab001b1cb053ec0d7b1b47b0f7bf98e71647329181_main.jpg",
     "fecha": "1990-01-12",
-    "nombre": "Dragon Ball Z"
+    "nombre": "Dragon Ball Z",
+    "tipo":"anime"
   },
   {
+    "id":"14",
+    "genero":"shonnen",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://images.justwatch.com/poster/8603866/s718/naruto-shippuden.%7Bformat%7D",
     "fecha": "2000-04-23",
-    "nombre": "Naruto Shippuden"
+    "nombre": "Naruto Shippuden",
+    "tipo":"anime"
   },
   {
+    "id":"15",
+    "genero":"shonnen",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://img1.ak.crunchyroll.com/i/spire3/cbb55a6382682bf71e91f685c6473c5a1487736090_full.jpg",
     "fecha": "1901-03-17",
-    "nombre": "Hunter x Hunter"
+    "nombre": "Hunter x Hunter",
+    "tipo":"anime"
   }
 ]

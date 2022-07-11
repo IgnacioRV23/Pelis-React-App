@@ -1,27 +1,52 @@
 [
   {
+    "id":"6",
+    "genero":"animada",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://fontmeme.com/images/ben-10-font.jpg",
     "fecha": "2010-10-10",
-    "nombre": "Ben 10"
+    "nombre": "Ben 10",
+    "tipo":"serie"
   },
   {
+    "id":"7",
+    "genero":"animada",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://mx.web.img2.acsta.net/c_310_420/pictures/18/01/23/00/56/0950731.jpg",
     "fecha": "2011-08-28",
-    "nombre": "El increible mundo de gumball"
+    "nombre": "El increible mundo de gumball",
+    "tipo":"serie"
   },
   {
+    "id":"8",
+    "genero":"animada",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://unity-img.tbxapis.com/v0/images/a56a7a3b2854e0d86f561f6da95150fa/content/618d4f44a4cc292e2f309c6f/19dfbad4a0372fc05dd9637574fab3fa/img.jpg?_v=1.5.70",
     "fecha": "2005-07-19",
-    "nombre": "Los padrinos mágicos"
+    "nombre": "Los padrinos mágicos",
+    "tipo":"serie"
   },
   {
+    "id":"9",
+    "genero":"animada",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.formulatv.com/images/series/posters/1500/1525/dest_1.jpg",
     "fecha": "2000-03-05",
-    "nombre": "Gravity falls"
+    "nombre": "Gravity falls",
+    "tipo":"serie"
   },
   {
+    "id":"10",
+    "genero":"animada",
+    "duracion":"170",
+    "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.formulatv.com/images/series/posters/300/375/dest_1.jpg",
     "fecha": "1990-07-20",
-    "nombre": "Bob esponja"
+    "nombre": "Bob esponja",
+    "tipo":"serie"
   }
 ]

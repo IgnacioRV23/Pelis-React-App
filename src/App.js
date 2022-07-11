@@ -1,10 +1,12 @@
 import './App.css';
-import { Formulario } from './components/Formulario';
-import { Listado } from './components/Listado';
+import { useState } from 'react';
 import anime from './model/anime.json';
 import series from './model/series.json';
 import peliculas from './model/peliculas.json';
-import { useState } from 'react';
+import { Formulario } from './components/Formulario';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Detalle } from './components/Detalle';
+import { Main } from './components/Main';
 
 function App() {
 
@@ -14,8 +16,10 @@ function App() {
 
   const [listaAnime, setListaAnime] = useState(anime);
 
+  const [validaLayout, setValidaLayout] = useState(false);
+
   return (
-    <div className="layout">
+    <div className={validaLayout ? "layout-hidden" : "layout"}>
       <header className="header">
         <div className="container_logo">
           <i className="bi bi-camera-reels-fill camera-logo"></i>
@@ -52,26 +56,18 @@ function App() {
       </header>
 
       <main className="main">
-        <h2 className="title-cards">Películas</h2>
-        <div className="container_cards">
-          <Listado listaProductos={listaPeliculas}/>
-        </div>
-
-        <h2 className="title-cards">Series</h2>
-        <div className="container_cards">
-          <Listado listaProductos={listaSeries}/>
-        </div>
-
-        <h2 className="title-cards">Anime</h2>   
-        <div className="container_cards">
-          <Listado listaProductos={listaAnime}/>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout}/>} />
+            <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>}/>
+          </Routes>
+        </BrowserRouter>
       </main>
 
-      <section className="form">
+      <section className={validaLayout ? "form-hidden" : "form"}>
         <div className="container_form">
           <h3 className="title-form">Lista de Productos</h3>
-          <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime}/>
+          <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime} />
         </div>
       </section>
 
@@ -80,9 +76,7 @@ function App() {
           Todos los derechos reservados &copy; Ignacio Rodríguez Varela | 2022
         </p>
 
-        <p className="footer-help">
-          <a href="#">Ayuda o soporte técnico</a>
-        </p>
+        <p className="footer-help">Ayuda o soporte técnico</p>
       </footer>
     </div>
   );
