@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import anime from '../model/anime.json';
+import series from '../model/series.json';
+import peliculas from '../model/peliculas.json';
 
 export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) => {
 
@@ -34,15 +37,18 @@ export const Formulario = ({setListaPeliculas, setListaSeries, setListaAnime}) =
 
         switch (tipo) {
           case "pelicula":
-            setListaPeliculas((peliculas) => [...peliculas, producto]);
+            peliculas.push(producto);
+            setListaPeliculas((peliculas) => [...peliculas]);
             break;
-
-          case "serie":
-            setListaSeries((series) => [...series, producto])
+            
+            case "serie":
+              series.push(producto);
+              setListaSeries((series) => [...series]);
             break;
 
           case "anime":
-            setListaAnime((anime) => [...anime, producto]);
+            anime.push(producto);
+            setListaAnime((anime) => [...anime]);
             break;
         }
         e.target.reset();

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import anime from '../model/anime.json';
 import series from '../model/series.json';
 import peliculas from '../model/peliculas.json';
-import fs from 'fs';
 
 export const Detalle = ({ setValidaLayout }) => {
 
@@ -11,18 +10,23 @@ export const Detalle = ({ setValidaLayout }) => {
 
   let { tipo, id } = useParams();
 
+  const errorImagen = (event) => {
+    event.target.src = "https://www.globalsign.com/application/files/9516/0389/3750/What_Is_an_SSL_Common_Name_Mismatch_Error_-_Blog_Image.jpg";
+    event.onerror = null;
+  };
+
   switch (tipo) {
     case "pelicula":
       return (
         <>
           {
             peliculas.map((pelicula) => {
-              if (pelicula.id === id) {
+              if (pelicula.id == id) {
                 return (
                   <div className='container_detalle' key={pelicula.id}>
                     <div className='detalle-flex'>
                       <section>
-                        <img src={pelicula.imagen} alt={pelicula.nombre} className='imagen-detalle' />
+                        <img src={pelicula.imagen} alt={pelicula.nombre} onError={(event) => errorImagen(event)} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
                         <h2 className='title-detalle'>Detalles de la película</h2>
@@ -50,12 +54,12 @@ export const Detalle = ({ setValidaLayout }) => {
         <>
           {
             series.map((serie) => {
-              if (serie.id === id) {
+              if (serie.id == id) {
                 return (
                   <div className='container_detalle' key={serie.id}>
                     <div className='detalle-flex'>
                       <section>
-                        <img src={serie.imagen} alt={serie.nombre} className='imagen-detalle' />
+                        <img src={serie.imagen} alt={serie.nombre}  onError={(event) => errorImagen(event)} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
                         <h2 className='title-detalle'>Detalles de la película</h2>
@@ -83,12 +87,12 @@ export const Detalle = ({ setValidaLayout }) => {
         <>
           {
             anime.map((anime) => {
-              if (anime.id === id) {
+              if (anime.id == id) {
                 return (
                   <div className='container_detalle' key={anime.id}>
                     <div className='detalle-flex'>
                       <section>
-                        <img src={anime.imagen} alt={anime.nombre} className='imagen-detalle' />
+                        <img src={anime.imagen} alt={anime.nombre} onError={(event) => errorImagen(event)} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
                         <h2 className='title-detalle'>Detalles de la película</h2>
