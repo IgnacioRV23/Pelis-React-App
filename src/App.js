@@ -3,10 +3,11 @@ import { useState } from 'react';
 import anime from './model/anime.json';
 import series from './model/series.json';
 import peliculas from './model/peliculas.json';
-import { Formulario } from './components/Formulario';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Detalle } from './components/Detalle';
 import { Main } from './components/Main';
+import { Detalle } from './components/Detalle';
+import { Formulario } from './components/Formulario';
+import { Peliculas } from './components/Peliculas';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
 
@@ -26,40 +27,43 @@ function App() {
           <h1 className="title-logo">Mispelis.com</h1>
         </div>
         <nav className="nav">
-          <ul>
-            <li>
-              <i className="bi bi-house-fill"></i>
-              <a href="#">Inicio</a>
-            </li>
+          <BrowserRouter>
+            <ul>
+              <li>
+                <i className="bi bi-house-fill"></i>
+                <NavLink to="/">Inicio</NavLink>
+              </li>
 
-            <li>
-              <i className="bi bi-camera-video-fill"></i>
-              <a href="#">Películas</a>
-            </li>
+              <li>
+                <i className="bi bi-camera-video-fill"></i>
+                <NavLink to="/peliculas">Películas</NavLink>
+              </li>
 
-            <li>
-              <i className="bi bi-tv-fill"></i>
-              <a href="#">Series</a>
-            </li>
+              <li>
+                <i className="bi bi-tv-fill"></i>
+                <NavLink to="/series">Series</NavLink>
+              </li>
 
-            <li>
-              <i className="bi bi-eye-fill"></i>
-              <a href="#">Anime</a>
-            </li>
+              <li>
+                <i className="bi bi-eye-fill"></i>
+                <NavLink to="/anime">Anime</NavLink>
+              </li>
 
-            <li className="container-search">
-              <i className="bi bi-search"></i>
-              <input type="text" placeholder="Buscar película" />
-            </li>
-          </ul>
+              <li className="container-search">
+                <i className="bi bi-search"></i>
+                <input type="text" placeholder="Buscar película" />
+              </li>
+            </ul>
+          </BrowserRouter>
         </nav>
       </header>
 
       <main className="main">
         <BrowserRouter>
           <Routes>
-            <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout}/>} />
-            <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>}/>
+            <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout} />} />
+
+            <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout} />} />
           </Routes>
         </BrowserRouter>
       </main>

@@ -92,7 +92,7 @@ export const Detalle = ({ setValidaLayout }) => {
                   <div className='container_detalle' key={anime.id}>
                     <div className='detalle-flex'>
                       <section>
-                        <img src={anime.imagen} alt={anime.nombre} onError={(event) => errorImagen(event)} className='imagen-detalle' />
+                        <img src={anime.imagen} alt={anime.nombre} onError={(event) => errorImagen(event )} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
                         <h2 className='title-detalle'>Detalles de la película</h2>

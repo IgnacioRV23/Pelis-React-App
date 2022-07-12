@@ -2,7 +2,7 @@
   {
     "id":"1",
     "nombre": "The Batman",
-    "genero":"accion",
+    "genero":"heroes",
     "duracion":"170",
     "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.cinevistablog.com/wp-content/uploads/2022/03/resena-the-batman-2022.jpg",
@@ -11,7 +11,7 @@
   },
   {
     "id":"2",
-    "genero":"accion",
+    "genero":"magia",
     "duracion":"170",
     "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://es.web.img2.acsta.net/pictures/14/04/30/11/55/592219.jpg",
@@ -21,7 +21,7 @@
   },
   {
     "id":"3",
-    "genero":"accion",
+    "genero":"heroes",
     "duracion":"170",
     "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://www.cinemascomics.com/wp-content/uploads/2016/05/Iron_Man_2_Poster.jpg",
@@ -31,7 +31,7 @@
   },
   {
     "id":"4",
-    "genero":"accion",
+    "genero":"princesas",
     "duracion":"170",
     "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9788/4488/9788448835859.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "id":"5",
-    "genero":"accion",
+    "genero":"acción",
     "duracion":"170",
     "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam nam impedit ex cum optio corporis beatae recusandae illum. Nihil totam odit, praesentium quam corporis voluptate debitis quod nemo quibusdam.",
     "imagen": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/54d8d22e16fc1162de72ad15ca49014ce47e0fd4f8030c992e5da68224827ccb._RI_V_TTW_.jpg",

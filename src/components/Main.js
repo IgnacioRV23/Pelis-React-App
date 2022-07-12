@@ -1,7 +1,7 @@
 import React from 'react'
 import { Listado } from '../components/Listado';
 
-export const Main = ({ listaPeliculas, listaSeries, listaAnime, setValidaLayout }) => {
+export const Main = ({ listaPeliculas, listaSeries, listaAnime, setValidaLayout, }) => {
 
     setValidaLayout(false);
 

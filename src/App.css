@@ -267,6 +267,7 @@
         "main main main main"
         "footer footer footer footer"
     ;
+    grid-template-rows: 100px auto 50px;
 }
 
 
