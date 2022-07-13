@@ -62,16 +62,16 @@ export const Detalle = ({ setValidaLayout }) => {
                         <img src={serie.imagen} alt={serie.nombre}  onError={(event) => errorImagen(event)} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
-                        <h2 className='title-detalle'>Detalles de la película</h2>
+                        <h2 className='title-detalle'>Detalles de la serie</h2>
                         <p>Nombre: <span className='color-serie'>{serie.nombre}</span></p>
                         <p>Género: <span className='color-serie'>{serie.genero}</span></p>
                         <p>Fecha: <span className='color-serie'>{serie.fecha}</span></p>
                         <p>Duración: <span className='color-serie'>{serie.duracion}</span></p>
-                        <p className='boton-ver'>Ver película</p>
+                        <p className='boton-ver'>Ver serie</p>
                       </section>
                     </div>
                     <section className='descripcion-detalle'>
-                      <h2>Descripción de la película</h2>
+                      <h2>Descripción de la serie</h2>
                       <p className='parrafo-descripcion'>{serie.descripcion}</p>
                     </section>
                   </div>
@@ -95,16 +95,16 @@ export const Detalle = ({ setValidaLayout }) => {
                         <img src={anime.imagen} alt={anime.nombre} onError={(event) => errorImagen(event )} className='imagen-detalle' />
                       </section>
                       <section className='datos-detalle'>
-                        <h2 className='title-detalle'>Detalles de la película</h2>
+                        <h2 className='title-detalle'>Detalles del anime</h2>
                         <p>Nombre: <span className='color-anime'>{anime.nombre}</span></p>
                         <p>Género: <span className='color-anime'>{anime.genero}</span></p>
                         <p>Fecha: <span className='color-anime'>{anime.fecha}</span></p>
                         <p>Duración: <span className='color-anime'>{anime.duracion}</span></p>
-                        <p className='boton-ver'>Ver película</p>
+                        <p className='boton-ver'>Ver anime</p>
                       </section>
                     </div>
                     <section className='descripcion-detalle'>
-                      <h2>Descripción de la película</h2>
+                      <h2>Descripción del anime</h2>
                       <p className='parrafo-descripcion'>{anime.descripcion}</p>
                     </section>
                   </div>

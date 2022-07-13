@@ -9,10 +9,10 @@
     display: grid;
     grid-template-areas:
         "header header header header"
-        "main main main form"
+        "form main main main"
         "footer footer footer footer"
     ;
-    grid-template-rows: 80px auto 40px;
+    grid-template-rows: 10% 85% 5%;
 }
 
 
@@ -87,6 +87,7 @@
     padding: 10px 0;
     min-width: 965px;
     background-color: #154360;
+    overflow: auto;
 }
 
 .container_cards {
@@ -99,6 +100,12 @@
 .title-cards {
     color:#fff;
     margin: 15px;
+}
+
+.title-error {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .container_cards .card {
@@ -141,26 +148,26 @@
     color:#000;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 15px;
+    padding: 5px 10px;
     align-items: center;
     box-shadow: 0 0 2px #EAF2F8;
     background-color: #EAF2F8;
 }
 
 .imagen-detalle {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     display: inline-block;
     border:1px solid #000;
 }
 
 .datos-detalle {
-    padding:20px;
+    padding:5px;
     flex-grow: 2;
 }
 
 .datos-detalle p {
-    margin: 40px;
+    margin: 35px;
 }
 
 .title-detalle {
@@ -204,13 +211,13 @@
 .form {
     grid-area: form;
     display: flex;
+    max-width: 335px;
     justify-content: center;
     background-color: #D4E6F1;
-    max-width: 335px;
 }
 
 .container_form {
-    margin: 20px;
+    margin: 10px;
     padding: 1px 30px;
     text-align: center;
     width: min-content;
@@ -231,7 +238,7 @@
     outline: none;
     padding:5px;
     width: 200px;
-    height: 40px;
+    height: 30px;
     box-shadow: 0 0 8px 1px #B3B6B7;
 }
 
@@ -239,8 +246,8 @@
     border:none;
     outline: none;
     padding:5px;
-    width: 220px;
-    height: 40px;
+    width: 210px;
+    height: 30px;
     box-shadow: 0 0 8px 1px #B3B6B7;
 }
 
@@ -261,6 +268,7 @@
 /* Apartado que permite ocultar la seccion de formulario. */
 .form-hidden {
     display: none;
+    transition: all 300ms;
 }
 
 .layout-hidden {
@@ -271,7 +279,7 @@
         "main main main main"
         "footer footer footer footer"
     ;
-    grid-template-rows: 80px auto 40px;
+    grid-template-rows: 10% 85% 5%;
 }
 
 

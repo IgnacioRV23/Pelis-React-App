@@ -10,7 +10,7 @@ export const Listado = ({listaProductos}) => {
 
     return(
         <>
-            { listaProductos != null ?
+            { listaProductos != [] && listaProductos != null ?
                 listaProductos.map((apartado) => {
                     return (
                         <article className="card" key={apartado.id}>

@@ -8,6 +8,8 @@ import { Detalle } from './components/Detalle';
 import { Formulario } from './components/Formulario';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Peliculas } from './components/Peliculas';
+import { Series } from './components/Series';
+import { Anime } from './components/Anime';
 
 function App() {
 
@@ -18,6 +20,28 @@ function App() {
   const [listaAnime, setListaAnime] = useState(anime);
 
   const [validaLayout, setValidaLayout] = useState(false);
+
+  const buscador = (event) => {
+    let nombre =  event.target.value;
+
+    // Se buscan las peliculas que coinciden con la busqueda y se setea el resultado a la lista.
+    let productosEncontrados = peliculas.filter(pelicula => {
+      return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
+    });
+    setListaPeliculas(productosEncontrados);
+
+    // Se buscan las series que coinciden con la busqueda y se setea el resultado a la lista.
+    productosEncontrados = series.filter(serie => {
+      return serie.nombre.toLocaleLowerCase().includes(nombre.toLocaleLowerCase());
+    });
+    setListaSeries(productosEncontrados);
+
+    // Se buscan los animes que coinciden con la busqueda y se setea el resultado a la lista.
+    productosEncontrados = anime.filter(anime => {
+      return anime.nombre.toLocaleLowerCase().includes(nombre.toLocaleLowerCase());
+    });
+    setListaAnime(productosEncontrados);
+  };
 
   return (
     <BrowserRouter>
@@ -51,7 +75,7 @@ function App() {
 
               <li className="container-search">
                 <i className="bi bi-search"></i>
-                <input type="text" placeholder="Buscar película" />
+                <input type="text" placeholder="Buscar película" onChange={(e) => buscador(e)}/>
               </li>
             </ul>
           </nav>
@@ -59,9 +83,13 @@ function App() {
 
         <main className="main">
           <Routes>
-            <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout} />} />
+            <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>} />
 
             <Route path='/peliculas' element={<Peliculas listaPeliculas={listaPeliculas} setValidaLayout={setValidaLayout} />} />
+
+            <Route path='/series' element={<Series listaSeries={listaSeries} setValidaLayout={setValidaLayout}/>}/>
+
+            <Route path="/anime" element={<Anime listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>}/>
 
             <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout} />} />
           </Routes>
