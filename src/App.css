@@ -12,7 +12,7 @@
         "main main main form"
         "footer footer footer footer"
     ;
-    grid-template-rows: 100px auto 50px;
+    grid-template-rows: 80px auto 40px;
 }
 
 
@@ -85,6 +85,7 @@
 .main {
     grid-area: main;
     padding: 10px 0;
+    min-width: 965px;
     background-color: #154360;
 }
 
@@ -205,6 +206,7 @@
     display: flex;
     justify-content: center;
     background-color: #D4E6F1;
+    max-width: 335px;
 }
 
 .container_form {
@@ -262,12 +264,14 @@
 }
 
 .layout-hidden {
+    height: 100vh;
+    display: grid;
     grid-template-areas:
         "header header header header"
         "main main main main"
         "footer footer footer footer"
     ;
-    grid-template-rows: 100px auto 50px;
+    grid-template-rows: 80px auto 40px;
 }
 
 

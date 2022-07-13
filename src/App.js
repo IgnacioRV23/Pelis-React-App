@@ -6,8 +6,8 @@ import peliculas from './model/peliculas.json';
 import { Main } from './components/Main';
 import { Detalle } from './components/Detalle';
 import { Formulario } from './components/Formulario';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Peliculas } from './components/Peliculas';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
 
@@ -20,33 +20,33 @@ function App() {
   const [validaLayout, setValidaLayout] = useState(false);
 
   return (
-    <div className={validaLayout ? "layout-hidden" : "layout"}>
-      <header className="header">
-        <div className="container_logo">
-          <i className="bi bi-camera-reels-fill camera-logo"></i>
-          <h1 className="title-logo">Mispelis.com</h1>
-        </div>
-        <nav className="nav">
-          <BrowserRouter>
+    <BrowserRouter>
+      <div className={validaLayout ? "layout-hidden" : "layout"}>
+        <header className="header">
+          <div className="container_logo">
+            <i className="bi bi-camera-reels-fill camera-logo"></i>
+            <h1 className="title-logo">Mispelis.com</h1>
+          </div>
+          <nav className="nav">
             <ul>
               <li>
                 <i className="bi bi-house-fill"></i>
-                <NavLink to="/">Inicio</NavLink>
+                <Link to="/">Inicio</Link>
               </li>
 
               <li>
                 <i className="bi bi-camera-video-fill"></i>
-                <NavLink to="/peliculas">Películas</NavLink>
+                <Link to="/peliculas">Películas</Link>
               </li>
 
               <li>
                 <i className="bi bi-tv-fill"></i>
-                <NavLink to="/series">Series</NavLink>
+                <Link to="/series">Series</Link>
               </li>
 
               <li>
                 <i className="bi bi-eye-fill"></i>
-                <NavLink to="/anime">Anime</NavLink>
+                <Link to="/anime">Anime</Link>
               </li>
 
               <li className="container-search">
@@ -54,35 +54,35 @@ function App() {
                 <input type="text" placeholder="Buscar película" />
               </li>
             </ul>
-          </BrowserRouter>
-        </nav>
-      </header>
+          </nav>
+        </header>
 
-      <main className="main">
-        <BrowserRouter>
+        <main className="main">
           <Routes>
             <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout} />} />
 
+            <Route path='/peliculas' element={<Peliculas listaPeliculas={listaPeliculas} setValidaLayout={setValidaLayout} />} />
+
             <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout} />} />
           </Routes>
-        </BrowserRouter>
-      </main>
+        </main>
 
-      <section className={validaLayout ? "form-hidden" : "form"}>
-        <div className="container_form">
-          <h3 className="title-form">Lista de Productos</h3>
-          <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime} />
-        </div>
-      </section>
+        <section className={validaLayout ? "form-hidden" : "form"}>
+          <div className="container_form">
+            <h3 className="title-form">Lista de Productos</h3>
+            <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime} />
+          </div>
+        </section>
 
-      <footer className="footer">
-        <p className="footer-copy">
-          Todos los derechos reservados &copy; Ignacio Rodríguez Varela | 2022
-        </p>
+        <footer className="footer">
+          <p className="footer-copy">
+            Todos los derechos reservados &copy; Ignacio Rodríguez Varela | 2022
+          </p>
 
-        <p className="footer-help">Ayuda o soporte técnico</p>
-      </footer>
-    </div>
+          <p className="footer-help">Ayuda o soporte técnico</p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
