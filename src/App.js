@@ -78,7 +78,7 @@ function App() {
 
             <Route path="/anime" element={<Anime listaAnime={listaAnime}/>}/>
 
-            <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout} />} />
+            <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout}/>} />
           </Routes>
         </main>
 

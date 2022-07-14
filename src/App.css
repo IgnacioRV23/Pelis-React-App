@@ -86,8 +86,8 @@
     grid-area: main;
     padding: 10px 0;
     min-width: 965px;
-    background-color: #154360;
     overflow: auto;
+    background-color: #154360;
 }
 
 .container_cards {
@@ -174,16 +174,8 @@
     text-align: center;
 }
 
-.color-pelicula {
-    color:#8E44AD;
-}
-
-.color-serie {
-    color:#E67E22;
-}
-
-.color-anime {
-    color:#C0392B;
+.color-elemento {
+    color:#154360;
 }
 
 .boton-ver {
