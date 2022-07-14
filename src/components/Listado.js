@@ -10,14 +10,14 @@ export const Listado = ({listaProductos}) => {
 
     return(
         <>
-            { listaProductos != [] && listaProductos != null ?
+            {listaProductos != null ?
                 listaProductos.map((apartado) => {
                     return (
                         <article className="card" key={apartado.id}>
                             <Link to={`/detalle/${apartado.tipo}/${apartado.id}`}>
                                 <img src={apartado.imagen} onError={event => errorImagen(event)} alt={apartado.nombre} className="image-card" />
                                 <p className="date-card">{apartado.fecha}</p>
-                                <p className="title-card">{apartado.nombre}</p>
+                                    <p className="title-card">{apartado.nombre}</p>
                             </Link>
                         </article>
                     )

@@ -1,5 +1,7 @@
 import React from 'react'
-import { Listado } from '../components/Listado';
+import { Anime } from './Anime';
+import { Series } from './Series';
+import { Peliculas } from './Peliculas';
 
 export const Main = ({ listaPeliculas, listaSeries, listaAnime, setValidaLayout }) => {
 
@@ -7,35 +9,11 @@ export const Main = ({ listaPeliculas, listaSeries, listaAnime, setValidaLayout 
 
     return (
         <>
-            <h2 className="title-cards">Películas</h2>
-            { listaPeliculas.length === 0 ?
-                <p className='title-error'>Sin resultados</p>
-                :
-                null
-            }
-            <div className="container_cards">
-                <Listado listaProductos={listaPeliculas} />
-            </div>
+            <Peliculas listaPeliculas={listaPeliculas}/>
 
-            <h2 className="title-cards">Series</h2>
-            { listaSeries.length === 0 ?
-                <p className='title-error'>Sin resultados</p>
-                :
-                null
-            }
-            <div className="container_cards">
-                <Listado listaProductos={listaSeries} />
-            </div>
+            <Series listaSeries={listaSeries}/>
 
-            <h2 className="title-cards">Anime</h2>
-            { listaAnime.length === 0 ?
-                <p className='title-error'>Sin resultados</p>
-                :
-                null
-            }
-            <div className="container_cards">
-                <Listado listaProductos={listaAnime} />
-            </div>
+            <Anime listaAnime={listaAnime}/>
         </>
     )
 }

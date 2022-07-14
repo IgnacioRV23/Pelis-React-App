@@ -3,16 +3,16 @@ import { useState } from 'react';
 import anime from './model/anime.json';
 import series from './model/series.json';
 import peliculas from './model/peliculas.json';
+import { Anime } from './components/Anime';
+import { Series } from './components/Series';
+import { Peliculas } from './components/Peliculas';
 import { Main } from './components/Main';
 import { Detalle } from './components/Detalle';
+import {buscador} from './controller/buscador';
 import { Formulario } from './components/Formulario';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Peliculas } from './components/Peliculas';
-import { Series } from './components/Series';
-import { Anime } from './components/Anime';
 
 function App() {
-
   const [listaPeliculas, setListaPeliculas] = useState(peliculas);
 
   const [listaSeries, setListaSeries] = useState(series);
@@ -21,27 +21,14 @@ function App() {
 
   const [validaLayout, setValidaLayout] = useState(false);
 
-  const buscador = (event) => {
-    let nombre =  event.target.value;
-
-    // Se buscan las peliculas que coinciden con la busqueda y se setea el resultado a la lista.
-    let productosEncontrados = peliculas.filter(pelicula => {
-      return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
-    });
-    setListaPeliculas(productosEncontrados);
-
-    // Se buscan las series que coinciden con la busqueda y se setea el resultado a la lista.
-    productosEncontrados = series.filter(serie => {
-      return serie.nombre.toLocaleLowerCase().includes(nombre.toLocaleLowerCase());
-    });
-    setListaSeries(productosEncontrados);
-
-    // Se buscan los animes que coinciden con la busqueda y se setea el resultado a la lista.
-    productosEncontrados = anime.filter(anime => {
-      return anime.nombre.toLocaleLowerCase().includes(nombre.toLocaleLowerCase());
-    });
-    setListaAnime(productosEncontrados);
-  };
+  const listaElementos = {
+    peliculas,
+    setListaPeliculas,
+    series,
+    setListaSeries,
+    anime,
+    setListaAnime
+  }
 
   return (
     <BrowserRouter>
@@ -60,22 +47,22 @@ function App() {
 
               <li>
                 <i className="bi bi-camera-video-fill"></i>
-                <Link to="/peliculas">Películas</Link>
+                <Link to="/peliculas" onClick={()=>setValidaLayout(true)}>Películas</Link>
               </li>
 
               <li>
                 <i className="bi bi-tv-fill"></i>
-                <Link to="/series">Series</Link>
+                <Link to="/series" onClick={()=>setValidaLayout(true)}>Series</Link>
               </li>
 
               <li>
                 <i className="bi bi-eye-fill"></i>
-                <Link to="/anime">Anime</Link>
+                <Link to="/anime" onClick={()=>setValidaLayout(true)}>Anime</Link>
               </li>
 
               <li className="container-search">
                 <i className="bi bi-search"></i>
-                <input type="text" placeholder="Buscar película" onChange={(e) => buscador(e)}/>
+                <input type="text" placeholder="Buscar película" onChange={(e) => buscador(e,listaElementos)}/>
               </li>
             </ul>
           </nav>
@@ -85,11 +72,11 @@ function App() {
           <Routes>
             <Route path='/' element={<Main listaPeliculas={listaPeliculas} listaSeries={listaSeries} listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>} />
 
-            <Route path='/peliculas' element={<Peliculas listaPeliculas={listaPeliculas} setValidaLayout={setValidaLayout} />} />
+            <Route path='/peliculas' element={<Peliculas listaPeliculas={listaPeliculas}/>}/>
 
-            <Route path='/series' element={<Series listaSeries={listaSeries} setValidaLayout={setValidaLayout}/>}/>
+            <Route path='/series' element={<Series listaSeries={listaSeries}/>}/>
 
-            <Route path="/anime" element={<Anime listaAnime={listaAnime} setValidaLayout={setValidaLayout}/>}/>
+            <Route path="/anime" element={<Anime listaAnime={listaAnime}/>}/>
 
             <Route path='/detalle/:tipo/:id' element={<Detalle setValidaLayout={setValidaLayout} />} />
           </Routes>
@@ -97,7 +84,7 @@ function App() {
 
         <section className={validaLayout ? "form-hidden" : "form"}>
           <div className="container_form">
-            <h3 className="title-form">Lista de Productos</h3>
+            <h3 className="title-form">Crear un Productos</h3>
             <Formulario setListaPeliculas={setListaPeliculas} setListaSeries={setListaSeries} setListaAnime={setListaAnime} />
           </div>
         </section>
